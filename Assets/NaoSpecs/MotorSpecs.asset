@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d2a01a3288e7447874780f3e18f5ab, type: 3}
+  m_Name: MotorSpecs
+  m_EditorClassIdentifier: 
+  type1Speed: 8300
+  type1StallTorque: 68
+  type1MoveTorque: 16.1
+  type1SpeedReductionA: 201.3
+  type1SpeedReductionB: 130.85
+  type2Speed: 8400
+  type2StallTorque: 9.4
+  type2MoveTorque: 4.9
+  type2SpeedReductionA: 50.61
+  type2SpeedReductionB: 36.24
+  type3Speed: 10700
+  type3StallTorque: 14.3
+  type3MoveTorque: 6.2
+  type3SpeedReductionA: 150.27
+  type3SpeedReductionB: 173.22
+  type4Speed: 112700
+  type4StallTorque: 22.4
+  type4MoveTorque: 5.53
+  type4SpeedReductionA: 150.27
+  type4SpeedReductionB: 0

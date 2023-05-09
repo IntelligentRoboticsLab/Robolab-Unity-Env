@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultVolumeProfile: {fileID: 11400000, guid: ec1ed68b916b55744a07541c9840db4a,
     type: 2}
-  m_LookDevVolumeProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02,
+  m_LookDevVolumeProfile: {fileID: 11400000, guid: a5a930977d7b9d0409b5e66ac5fbb5aa,
     type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
@@ -68,7 +68,8 @@ MonoBehaviour:
   beforeTransparentCustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []
   afterPostProcessBlursCustomPostProcesses: []
-  afterPostProcessCustomPostProcesses: []
+  afterPostProcessCustomPostProcesses:
+  - DigitalCameraNoise, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   beforeTAACustomPostProcesses: []
   lightLayerName0: Light Layer default
   lightLayerName1: Light Layer 1
