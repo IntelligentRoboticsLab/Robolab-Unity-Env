@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LabelEntries:
   - label: Football
-    id: 1
+    id: 0
     hierarchyRelation: 0
   - label: Nao_Robot
-    id: 2
+    id: 1
     hierarchyRelation: 0
   autoAssignIds: 1
-  startingLabelId: 1
+  startingLabelId: 0

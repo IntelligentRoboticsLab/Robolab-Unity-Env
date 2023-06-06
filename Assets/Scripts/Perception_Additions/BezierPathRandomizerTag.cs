@@ -1,9 +1,6 @@
 using System;
-using PathCreation;
 using UnityEngine;
-using UnityEngine.Perception.Randomization.Parameters;
 using UnityEngine.Perception.Randomization.Randomizers;
-using UnityEngine.Perception.Randomization.Samplers;
 using Random = UnityEngine.Random;
 
 // Add this Component to any GameObject that you would like to be randomized. This class must have an identical name to

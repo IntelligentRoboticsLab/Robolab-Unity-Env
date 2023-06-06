@@ -1,6 +1,6 @@
 {
   "UnityEngine.Perception.GroundTruth.Consumers.SoloEndpoint.output_path": {
     "type": "String",
-    "value": "C:/Users/Joey/AppData/LocalLow/UvA Visualisation Lab/Lab42 Groenenschild"
+    "value": "D:/UserProjects/Joey/Unity/Robolab-Unity-Env/Datasets"
   }
 }

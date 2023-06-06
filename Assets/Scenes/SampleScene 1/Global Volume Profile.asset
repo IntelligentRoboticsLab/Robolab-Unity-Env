@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31394aa05878563408489d5c1688f3a0, type: 3}
   m_Name: PathTracing
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enable:
     m_OverrideState: 1
     m_Value: 1
@@ -118,11 +118,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 2
   useAOVs:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   temporal:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   asyncDenoising:
     m_OverrideState: 0
     m_Value: 1
