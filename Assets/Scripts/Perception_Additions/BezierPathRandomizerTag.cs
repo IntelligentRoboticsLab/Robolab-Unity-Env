@@ -12,6 +12,7 @@ using Random = UnityEngine.Random;
 public class BezierPathRandomizerTag : RandomizerTag
 {
     public Vector2 positionOffsetRange;
+    public Vector2 rotationOffsetRange;
     public bool randomInvert;
 }
 
@@ -34,15 +35,18 @@ public class BezierPathRandomizer : Randomizer
             tag.transform.localPosition += new Vector3(randomPosition, 0.0f, 0.0f);
 
             Quaternion targetRot = follower.pathCreator.path.GetRotation(timeStep);
-
+            
             var resultRotation = targetRot.eulerAngles;
+            
+            float randomRotation = Random.Range(tag.rotationOffsetRange.x, tag.rotationOffsetRange.y);
+            resultRotation += new Vector3(0.0f, randomRotation, 0.0f);
+            
             if (tag.randomInvert && Random.value <= 0.5f)
             {
                 resultRotation += new Vector3(0.0f, 180.0f, 0.0f);
             }
             
             tag.transform.localRotation = Quaternion.Euler(resultRotation);
-            
         }
     }
 }
