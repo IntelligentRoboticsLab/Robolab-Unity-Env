@@ -9,28 +9,40 @@ using Random = UnityEngine.Random;
 [Serializable]
 [AddRandomizerMenu("Perception/RandomizerTags/Bezier Path Randomizer")]
 [RequireComponent(typeof(TrackFollowingRandomizer))]
-public class BezierPathRandomizerTag : RandomizerTag {}
+public class BezierPathRandomizerTag : RandomizerTag
+{
+    public Vector2 positionOffsetRange;
+    public bool randomInvert;
+}
 
 [Serializable]
 [AddRandomizerMenu("Perception/Bezier Path Randomizer")]
 public class BezierPathRandomizer : Randomizer
 {
-    // Sample FloatParameter that can generate random floats in the [0,360) range. The range can be modified using the
-    // Inspector UI of the Randomizer.
-
     protected override void OnIterationStart()
     {
         var tags = tagManager.Query<BezierPathRandomizerTag>();
         foreach (var tag in tags)
         {
             var follower = tag.GetComponent<TrackFollowingRandomizer>();
-
             float timeStep = Random.value;
             Vector3 targetPos = follower.pathCreator.path.GetPointAtTime(timeStep);
             tag.transform.position = targetPos;
-        
+
+            float randomPosition = Random.Range(tag.positionOffsetRange.x, tag.positionOffsetRange.y);
+            
+            tag.transform.localPosition += new Vector3(randomPosition, 0.0f, 0.0f);
+
             Quaternion targetRot = follower.pathCreator.path.GetRotation(timeStep);
-            tag.transform.localRotation = targetRot;
+
+            var resultRotation = targetRot.eulerAngles;
+            if (tag.randomInvert && Random.value <= 0.5f)
+            {
+                resultRotation += new Vector3(0.0f, 180.0f, 0.0f);
+            }
+            
+            tag.transform.localRotation = Quaternion.Euler(resultRotation);
+            
         }
     }
 }
